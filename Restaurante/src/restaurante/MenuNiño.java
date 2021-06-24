@@ -11,9 +11,7 @@ package restaurante;
  */
 public class MenuNiño extends Restaurante{
     
-    protected String nombrePlato;
-    protected double valorMenu;
-    protected double valorInicial;
+
     protected double valorPorHela;
     protected double valorPorPastel;
     

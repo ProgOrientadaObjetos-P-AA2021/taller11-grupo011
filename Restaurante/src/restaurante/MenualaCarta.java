@@ -10,24 +10,12 @@ package restaurante;
  * @author ASUS
  */
 public class MenualaCarta extends Restaurante{
-    protected String nombrePlato;
-    protected double valorMenu;
-    protected double valIniMenu;
+
     protected double valorGuarnicion;
     protected double valorBebida;
     protected double valorAdicion;
     
-    public void establecerNombrePlato(String n){
-        nombrePlato= n;
-    }
-    
-    public void establecerValorMenu(double n){
-        valorMenu=n;
-    }
-    
-    public void establecerValIniMenu(double n){
-        valIniMenu=n;
-    }
+
     
     public void establecerValorGuarnicion(double n){
         valorGuarnicion=n;
