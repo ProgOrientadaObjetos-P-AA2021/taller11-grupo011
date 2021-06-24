@@ -25,8 +25,8 @@ public class MenudelDia extends Menu{
     }
     
     @Override
-    public void establecerValorMenu(double n){
-        valorMenu=n;
+    public void establecerValorMenu(){
+        valorMenu=valorInicial+valorPostre+valorBebida;
     }
     
     @Override

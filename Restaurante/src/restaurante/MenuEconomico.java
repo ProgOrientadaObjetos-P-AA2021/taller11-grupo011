@@ -22,9 +22,10 @@ public class MenuEconomico extends Menu{
     public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
+    
     @Override
-    public void establecerValorMenu(double tipo){
-        valorMenu = tipo;
+    public void establecerValorMenu(){
+        valorMenu = valorInicial-(valorInicial*(descuento/100));
     }
     @Override
     public void establecerValorInicial(double tipo){
@@ -32,8 +33,8 @@ public class MenuEconomico extends Menu{
     }
     public void establecerDescuento(double tipo){
         descuento = tipo;
-
     }
+    
     public double obtenerDescuento(){
         return descuento;
     }

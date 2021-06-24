@@ -26,10 +26,10 @@ public class MenualaCarta extends Menu{
     }
     
     @Override
-    public void establecerValorMenu(double n){
-        valorMenu=n;
-    }
-    
+    public void establecerValorMenu(){
+        valorMenu = valorGuarnicion+valorBebida+ 
+                valorInicial+(valorInicial*(valorInicial/100));
+    }    
     @Override
     public void establecerValorInicial(double n){
         valorInicial=n;

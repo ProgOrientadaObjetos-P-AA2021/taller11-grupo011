@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Cuenta {
     
     protected String nomCliente;
+    
     protected double iva;
     protected double valorTotal;
     protected double subTotal;
@@ -30,6 +31,7 @@ public class Cuenta {
     public void establecerNombreCliente(String tipo){
         nomCliente = tipo;
     }
+    
     public void establecerIva(double tipo){
         iva = tipo;
     }
@@ -39,6 +41,7 @@ public class Cuenta {
     public void establecerSubTotal(double tipo){
         subTotal = tipo;
     }
+
     public void establecerMenu(ArrayList<Menu> lista) {
         menu = lista;
     }
@@ -47,6 +50,7 @@ public class Cuenta {
     public String obtenerNombreCliente(){
         return nomCliente;
     }
+    
     public double obtenerIva(){
         return iva;
     }
@@ -72,12 +76,12 @@ public class Cuenta {
                     cadena,
                     obtenerMenu().get(i));
         }
-
+        /*
         cadena = String.format("\n%sValor Total a cancelar: %.2f\n"
                 + "SubTotal: %.2f\n"
                 + "Iva: %2.f\n",
                 cadena,
-                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());
+                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());*/
         return cadena;
     }
   

@@ -23,8 +23,8 @@ public class MenuNiño extends Menu{
         nombrePlato = tipo;
     }
     @Override
-    public void establecerValorMenu(double tipo){
-        valorMenu = tipo;
+    public void establecerValorMenu(){
+        valorMenu = valorInicial+valorPorHela+valorPorPastel;
     }
     @Override
     public void establecerValorInicial(double tipo){
