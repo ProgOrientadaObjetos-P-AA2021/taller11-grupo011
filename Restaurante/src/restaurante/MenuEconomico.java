@@ -7,10 +7,8 @@ package restaurante;
 
 /**
  *
- * @author ASUS
+ * @author usuario
  */
-public abstract class Restaurante {
-
-    
+public class MenuEconomico {
     
 }
