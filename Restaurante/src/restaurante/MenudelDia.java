@@ -9,14 +9,14 @@ package restaurante;
  *
  * @author ASUS
  */
-public class MenudelDia extends Restaurante{
+public class MenudelDia extends Menu{
 
     protected double valorPostre;
     protected double valorBebida;
     
-    public MenudelDia(String n,double vT, double sT,double i, String nom,
+    public MenudelDia(String nom,
             double vI, double Vm,double vP,double vB){
-        super( n, vT,sT, i,  nom,vI,Vm);
+        super(nom,vI,Vm);
     }
     
     @Override

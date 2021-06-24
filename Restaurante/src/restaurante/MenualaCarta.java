@@ -9,15 +9,15 @@ package restaurante;
  *
  * @author ASUS
  */
-public class MenualaCarta extends Restaurante{
+public class MenualaCarta extends Menu{
 
     protected double valorGuarnicion;
     protected double valorBebida;
     protected double valorAdicion;
     
-    public MenualaCarta(String n,double vT, double sT,double i, String nom,
-            double vI, double Vm,double vg,double vB,double vA){
-        super( n, vT,sT, i,  nom,vI,Vm);
+    public MenualaCarta(String nom,double vI, double Vm,double vg,
+            double vB,double vA){
+        super(nom,vI,Vm);
     }
     
     @Override

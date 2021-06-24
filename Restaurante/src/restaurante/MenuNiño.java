@@ -9,14 +9,13 @@ package restaurante;
  *
  * @author usuario
  */
-public class MenuNiño extends Restaurante{
+public class MenuNiño extends Menu{
     
     protected double valorPorHela;
     protected double valorPorPastel;
     
-    public MenuNiño(String n,double vT, double sT,double i, String nom,
-            double vI, double Vm,double vH,double vP){
-        super( n, vT,sT, i,  nom,vI,Vm);
+    public MenuNiño(String nom,double vI, double Vm,double vH,double vP){
+        super(nom,vI,Vm);
     }
     
     @Override

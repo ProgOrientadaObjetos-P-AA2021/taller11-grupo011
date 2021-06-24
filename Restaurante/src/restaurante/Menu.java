@@ -7,34 +7,35 @@ package restaurante;
 
 /**
  *
- * @author usuario
+ * @author ASUS
  */
+public abstract class Menu {
 
-public class MenuEconomico extends Menu{
+    protected String nombrePlato;
+    protected double valorInicial;
+    protected double valorMenu;
     
-    protected double descuento;
-    
-    public MenuEconomico(String nom, double vI, double Vm,double des){
-        super( nom,vI,Vm);
+    public Menu(String nom,double vI, double Vm){
+        
     }
     
-    @Override
     public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
-    @Override
     public void establecerValorMenu(double tipo){
         valorMenu = tipo;
     }
-    @Override
     public void establecerValorInicial(double tipo){
         valorInicial = tipo;
     }
-    public void establecerDescuento(double tipo){
-        descuento = tipo;
-
+    
+    public String obtenerNombrePlato(){
+        return nombrePlato;
     }
-    public double obtenerDescuento(){
-        return descuento;
+    public double obtenerValorInicial(){
+        return valorInicial;
+    }
+    public double obtenerValorMenu(){
+        return valorMenu;
     }
 }
