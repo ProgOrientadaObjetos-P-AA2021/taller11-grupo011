@@ -57,4 +57,21 @@ public class MenualaCarta extends Menu{
     public double obtenerValorAdicion(){
         return valorAdicion;
     }
+    @Override
+    public String toString() {
+        String cadena = String.format("Menú Niño: \n"
+                + "Nombre del plato: %s\n"
+                + "Valor inicial: %.2f\n"
+                + "Valor Menú: %.2f\n"
+                + "Valor por guarnición: %.2f\n"
+                + "Valor por bebida: %.2f\n"
+                + "Valor adicional: %.2f\n", 
+                obtenerNombrePlato(),
+                obtenerValorInicial(),
+                obtenerValorMenu(),
+                obtenerValorGuarnicion(),
+                obtenerValBebidas(),
+               obtenerValorAdicion()); 
+        return cadena;
+    }
 }

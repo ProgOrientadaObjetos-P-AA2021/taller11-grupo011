@@ -48,4 +48,19 @@ public class MenudelDia extends Menu{
     public double obtenerValBebidas(){
         return valorBebida;
     }
+    @Override
+    public String toString() {
+        String cadena = String.format("Menú Niño: \n"
+                + "Nombre del plato: %s\n"
+                + "Valor inicial: %.2f\n"
+                + "Valor Menú: %.2f\n"
+                + "Valor postre: %.2f\n"
+                + "Valor bebida: %.2f\n", 
+                obtenerNombrePlato(),
+                obtenerValorInicial(),
+                obtenerValorMenu(),
+                obtenerValorPostre(),
+                obtenerValBebidas()); 
+        return cadena;
+    }
 }

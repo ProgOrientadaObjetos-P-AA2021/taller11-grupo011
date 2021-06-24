@@ -37,4 +37,17 @@ public class MenuEconomico extends Menu{
     public double obtenerDescuento(){
         return descuento;
     }
+    @Override
+    public String toString() {
+        String cadena = String.format("Menú Económico: \n"
+                + "Nombre del plato: %s\n"
+                + "Valor inicial: %.2f\n"
+                + "Valor Menú: %.2f\n"
+                + "Descuento: %.2f\n", 
+                obtenerNombrePlato(),
+                obtenerValorInicial(),
+                obtenerValorMenu(),
+                obtenerDescuento()); 
+        return cadena;
+    }
 }
