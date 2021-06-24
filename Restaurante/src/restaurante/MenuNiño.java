@@ -11,41 +11,39 @@ package restaurante;
  */
 public class MenuNiño extends Restaurante{
     
-    protected String nombrePlato;
-    protected double valorMenu;
-    protected double valorInicial;
     protected double valorPorHela;
     protected double valorPorPastel;
     
-    public void establcerNombrePlato(String tipo){
+    public MenuNiño(String n,double vT, double sT,double i, String nom,
+            double vI, double Vm,double vH,double vP){
+        super( n, vT,sT, i,  nom,vI,Vm);
+    }
+    
+    @Override
+    public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
-    public void establcerValorMenu(double tipo){
+    @Override
+    public void establecerValorMenu(double tipo){
         valorMenu = tipo;
     }
-    public void establcerValorInicial(double tipo){
+    @Override
+    public void establecerValorInicial(double tipo){
         valorInicial = tipo;
     }
-    public void establcerValorPorHela(double tipo){
+    public void establecerValorPorHela(double tipo){
         valorPorHela = tipo;
     }
-    public void establcerValorPorPastel(double tipo){
+    public void establecerValorPorPastel(double tipo){
         valorPorPastel = tipo;
     }
-    public String obtenerNombrePlato(){
-        return nombrePlato;
-    }
-    public double obtenerValorMenu(){
-        return valorMenu;
-    }
-    public double obtenerValorInicial(){
-        return valorInicial;
-    }
+    
     public double obtenerValorPorHela(){
         return valorPorHela;
     }
     public double obtenerValorPorPastel(){
         return valorPorPastel;
     }
+
     
 }
