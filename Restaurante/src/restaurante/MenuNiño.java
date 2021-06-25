@@ -22,16 +22,8 @@ public class MenuNiño extends Menu{
     }
     
     @Override
-    public void establecerNombrePlato(String tipo){
-        nombrePlato = tipo;
-    }
-    @Override
     public void establecerValorMenu(){
         valorMenu = valorInicial+valorPorHela+valorPorPastel;
-    }
-    @Override
-    public void establecerValorInicial(double tipo){
-        valorInicial = tipo;
     }
     public void establecerValorPorHela(double tipo){
         valorPorHela = tipo;
@@ -52,14 +44,14 @@ public class MenuNiño extends Menu{
         String cadena = String.format("Menú Niño: \n"
                 + "Nombre del plato: %s\n"
                 + "Valor inicial: %.2f\n"
-                + "Valor Menú: %.2f\n"
                 + "Valor por helado: %.2f\n"
-                + "Valor por pastel: %.2f\n", 
+                + "Valor por pastel: %.2f\n"
+                + "Valor Menú: %.2f\n", 
                 obtenerNombrePlato(),
                 obtenerValorInicial(),
-                obtenerValorMenu(),
                 obtenerValorPorHela(),
-                obtenerValorPorPastel()); 
+                obtenerValorPorPastel(),
+                obtenerValorMenu()); 
         return cadena;
     }
     

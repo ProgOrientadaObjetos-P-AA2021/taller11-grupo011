@@ -12,41 +12,38 @@ import java.util.ArrayList;
 public class Cuenta {
     
     protected String nomCliente;
-    
+    protected ArrayList<Menu> menu = new ArrayList<>();
     protected double iva;
     protected double valorTotal;
     protected double subTotal;
-    protected ArrayList<Menu> menu = new ArrayList<>();
+   
     
-    public Cuenta(String n, ArrayList<Menu> lista,double i,
-            double vT, double sT) {
+    public Cuenta(String n, ArrayList<Menu> lista,double i) {
         nomCliente = n;
         menu = lista;
-    }
-    
-    public void establecerArriendos(ArrayList<Menu> lista) {
-        menu = lista;
+        iva=i;    
     }
     
     public void establecerNombreCliente(String tipo){
         nomCliente = tipo;
     }
     
-    public void establecerIva(double tipo){
-        iva = tipo;
-    }
-    public void establecerValorTotal(double tipo){
-        valorTotal = tipo;
-    }
-    public void establecerSubTotal(double tipo){
-        subTotal = tipo;
-    }
-
-    public void establecerMenu(ArrayList<Menu> lista) {
+    public void establecerMenus(ArrayList<Menu> lista) {
         menu = lista;
     }
     
-    
+    public void establecerIva(double tipo){
+        iva = tipo;
+    }
+    public void establecerValorTotal(){
+        valorTotal = subTotal+(subTotal*iva);
+    }
+    public void establecerSubTotal(){
+        for(int i = 0; i < obtenerMenu().size();i++){
+            subTotal=subTotal+obtenerMenu().get(i).valorMenu;
+        }
+    }
+
     public String obtenerNombreCliente(){
         return nomCliente;
     }
@@ -76,12 +73,12 @@ public class Cuenta {
                     cadena,
                     obtenerMenu().get(i));
         }
-        /*
-        cadena = String.format("\n%sValor Total a cancelar: %.2f\n"
-                + "SubTotal: %.2f\n"
-                + "Iva: %2.f\n",
+    
+        cadena = String.format("\n%sSubtotal de cuenta: %.2f\n"
+                + "Iva: %.2f\n"
+                + "Total de cuenta: %.2f\n",
                 cadena,
-                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());*/
+                obtenerSubTotal(),obtenerIva(),obtenerValorTotal());
         return cadena;
     }
   

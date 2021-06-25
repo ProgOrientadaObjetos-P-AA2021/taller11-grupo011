@@ -20,17 +20,8 @@ public class MenuEconomico extends Menu{
     }
     
     @Override
-    public void establecerNombrePlato(String tipo){
-        nombrePlato = tipo;
-    }
-    
-    @Override
     public void establecerValorMenu(){
         valorMenu = valorInicial-(valorInicial*(descuento/100));
-    }
-    @Override
-    public void establecerValorInicial(double tipo){
-        valorInicial = tipo;
     }
     public void establecerDescuento(double tipo){
         descuento = tipo;
@@ -43,13 +34,13 @@ public class MenuEconomico extends Menu{
     public String toString() {
         String cadena = String.format("Menú Económico: \n"
                 + "Nombre del plato: %s\n"
-                + "Valor inicial: %.2f\n"
-                + "Valor Menú: %.2f\n"
-                + "Descuento: %.2f\n", 
+                + "Valor inicial: %.2f\n" 
+                + "Descuento: %.2f\n"
+                + "Valor Menú: %.2f\n", 
                 obtenerNombrePlato(),
                 obtenerValorInicial(),
-                obtenerValorMenu(),
-                obtenerDescuento()); 
+                obtenerDescuento(),
+                obtenerValorMenu()); 
         return cadena;
     }
 }

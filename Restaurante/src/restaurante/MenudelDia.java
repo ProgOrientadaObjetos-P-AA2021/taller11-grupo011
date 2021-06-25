@@ -19,20 +19,10 @@ public class MenudelDia extends Menu{
         establecerValorPostre(vP);
         establecerValBebidas(vB);
     }
-    
-    @Override
-    public void establecerNombrePlato(String n){
-        nombrePlato= n;
-    }
 
     @Override
     public void establecerValorMenu(){
         valorMenu=valorInicial+valorPostre+valorBebida;
-    }
-    
-    @Override
-    public void establecerValorInicial(double n){
-        valorInicial=n;
     }
     
     public void establecerValorPostre(double n){

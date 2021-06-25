@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         ArrayList<Menu> listaMenus = new ArrayList<>();
-    }
+    
     
     MenuNiño menunino1= new MenuNiño("Plato 1",5,1.5,3.5);
     
@@ -26,16 +26,19 @@ public class Principal {
     
     MenualaCarta menucarta=new MenualaCarta("Plato 5", 5, 4.5, 1.5, 10);
     
-    /*listaMenus.add(menunino1);
+    listaMenus.add(menunino1);
     listaMenus.add(menunino2);
     listaMenus.add(menuE1);
     listaMenus.add(menudia);
     listaMenus.add(menucarta);
     
     for (int i = 0; i < listaMenus.size(); i++) {
-        listaMenus.get(i).establecerValorMenu();
-        
-            System.out.println(listaMenus.get(i));
-            System.out.println();
-    }*/
+        listaMenus.get(i).establecerValorMenu();   
+    }
+    
+    Cuenta cuenta = new Cuenta("Juan Alverto", listaMenus,0.12);
+    cuenta.establecerSubTotal();
+    cuenta.establecerValorTotal();
+    System.out.println(cuenta);
+    }
 }

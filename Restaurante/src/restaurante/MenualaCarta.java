@@ -71,16 +71,16 @@ public class MenualaCarta extends Menu{
         String cadena = String.format("Menú Carta: \n"
                 + "Nombre del plato: %s\n"
                 + "Valor inicial: %.2f\n"
-                + "Valor Menú: %.2f\n"
                 + "Valor por guarnición: %.2f\n"
                 + "Valor por bebida: %.2f\n"
-                + "Valor adicional: %.2f\n", 
+                + "Valor adicional: %.2f\n"
+                + "Valor Menú: %.2f\n", 
                 obtenerNombrePlato(),
                 obtenerValorInicial(),
-                obtenerValorMenu(),
                 obtenerValorGuarnicion(),
                 obtenerValBebidas(),
-               obtenerValorAdicion()); 
+                obtenerValorAdicion(),
+                obtenerValorMenu()); 
         return cadena;
     }
 }
