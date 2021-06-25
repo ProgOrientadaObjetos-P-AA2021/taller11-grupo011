@@ -39,11 +39,23 @@ public class Cuenta {
         valorTotal = subTotal+(subTotal*iva);
     }
     public void establecerSubTotal(){
+<<<<<<< HEAD
         for(int i = 0; i < obtenerMenu().size();i++){
             subTotal=subTotal+obtenerMenu().get(i).valorMenu;
         }
     }
 
+=======
+        for (int i = 0; i < menu.size(); i++) {         
+            subTotal = menu.get(i).obtenerValorMenu()+iva;     
+        }     
+    }
+    public void establecerMenu(ArrayList<Menu> lista) {
+        menu = lista;
+    }
+    
+    
+>>>>>>> 92540bd4f46be2253fbe8334a369fe7cb557cb97
     public String obtenerNombreCliente(){
         return nomCliente;
     }
@@ -73,12 +85,20 @@ public class Cuenta {
                     cadena,
                     obtenerMenu().get(i));
         }
+<<<<<<< HEAD
     
         cadena = String.format("\n%sSubtotal de cuenta: %.2f\n"
                 + "Iva: %.2f\n"
                 + "Total de cuenta: %.2f\n",
                 cadena,
                 obtenerSubTotal(),obtenerIva(),obtenerValorTotal());
+=======
+        cadena = String.format("\n%sValor Total a cancelar: %.2f\n"
+                + "SubTotal: %.2f\n"
+                + "Iva: %2.f\n",
+                cadena,
+                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());
+>>>>>>> 92540bd4f46be2253fbe8334a369fe7cb557cb97
         return cadena;
     }
   
