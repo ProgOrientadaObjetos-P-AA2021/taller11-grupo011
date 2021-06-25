@@ -44,15 +44,15 @@ public class MenudelDia extends Menu{
 
         String cadena = String.format("Menú del Dia: \n"
                 + "Nombre del plato: %s\n"
-                + "Valor inicial: %.2f\n"
-                + "Valor Menú: %.2f\n"
+                + "Valor inicial: %.2f\n" 
                 + "Valor postre: %.2f\n"
-                + "Valor bebida: %.2f\n", 
+                + "Valor bebida: %.2f\n"
+                + "Valor Menú: %.2f\n", 
                 obtenerNombrePlato(),
                 obtenerValorInicial(),
-                obtenerValorMenu(),
                 obtenerValorPostre(),
-                obtenerValBebidas()); 
+                obtenerValBebidas(),
+                obtenerValorMenu()); 
         return cadena;
     }
 }
