@@ -14,8 +14,9 @@ public class MenuEconomico extends Menu{
     
     protected double descuento;
     
-    public MenuEconomico(String nom, double vI, double Vm,double des){
-        super( nom,vI,Vm);
+    public MenuEconomico(String nom, double vI,double des){
+        super( nom,vI);
+        establecerDescuento(des);
     }
     
     @Override

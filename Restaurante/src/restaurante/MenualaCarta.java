@@ -9,15 +9,22 @@ package restaurante;
  *
  * @author ASUS
  */
+
+
+
 public class MenualaCarta extends Menu{
+
 
     protected double valorGuarnicion;
     protected double valorBebida;
     protected double valorAdicion;
     
-    public MenualaCarta(String nom,double vI, double Vm,double vg,
+    public MenualaCarta(String nom,double vI,double vg,
             double vB,double vA){
-        super(nom,vI,Vm);
+        super(nom,vI);
+        establecerValorGuarnicion(vg);
+        establecerValBebidas(vB);
+        establecerValorAdicion(vA);
     }
     
     @Override
@@ -28,12 +35,14 @@ public class MenualaCarta extends Menu{
     @Override
     public void establecerValorMenu(){
         valorMenu = valorGuarnicion+valorBebida+ 
-                valorInicial+(valorInicial*(valorInicial/100));
+                valorInicial+(valorInicial*(valorAdicion/100));
     }    
+
     @Override
     public void establecerValorInicial(double n){
         valorInicial=n;
     }
+
     
     public void establecerValorGuarnicion(double n){
         valorGuarnicion=n;
@@ -59,6 +68,7 @@ public class MenualaCarta extends Menu{
     }
     @Override
     public String toString() {
+
         String cadena = String.format("Menú a la carta: \n"
                 + "Nombre del plato: %s\n"
                 + "Valor inicial: %.2f\n"

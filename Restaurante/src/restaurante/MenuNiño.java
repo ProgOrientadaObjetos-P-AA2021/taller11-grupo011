@@ -11,11 +11,14 @@ package restaurante;
  */
 public class MenuNiño extends Menu{
     
+
     protected double valorPorHela;
     protected double valorPorPastel;
     
-    public MenuNiño(String nom,double vI, double Vm,double vH,double vP){
-        super(nom,vI,Vm);
+    public MenuNiño(String nom,double vI,double vH,double vP){
+        super(nom,vI);
+        establecerValorPorHela(vH);
+        establecerValorPorPastel(vP);
     }
     
     @Override

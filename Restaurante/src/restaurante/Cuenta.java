@@ -38,10 +38,11 @@ public class Cuenta {
     public void establecerValorTotal(double tipo){
         valorTotal = tipo;
     }
-    public void establecerSubTotal(double tipo){
-        subTotal = tipo;
+    public void establecerSubTotal(){
+        for (int i = 0; i < menu.size(); i++) {         
+            subTotal = menu.get(i).obtenerValorMenu()+iva;     
+        }     
     }
-
     public void establecerMenu(ArrayList<Menu> lista) {
         menu = lista;
     }

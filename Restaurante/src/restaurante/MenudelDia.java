@@ -14,16 +14,17 @@ public class MenudelDia extends Menu{
     protected double valorPostre;
     protected double valorBebida;
     
-    public MenudelDia(String nom,
-            double vI, double Vm,double vP,double vB){
-        super(nom,vI,Vm);
+    public MenudelDia(String nom,double vI,double vP,double vB){
+        super(nom,vI);
+        establecerValorPostre(vP);
+        establecerValBebidas(vB);
     }
     
     @Override
     public void establecerNombrePlato(String n){
         nombrePlato= n;
     }
-    
+
     @Override
     public void establecerValorMenu(){
         valorMenu=valorInicial+valorPostre+valorBebida;
@@ -50,7 +51,8 @@ public class MenudelDia extends Menu{
     }
     @Override
     public String toString() {
-        String cadena = String.format("Menú del día: \n"
+
+        String cadena = String.format("Menú del Dia: \n"
                 + "Nombre del plato: %s\n"
                 + "Valor inicial: %.2f\n"
                 + "Valor Menú: %.2f\n"

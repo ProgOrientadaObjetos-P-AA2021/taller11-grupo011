@@ -16,13 +16,15 @@ public abstract class Menu{
     protected double valorMenu;
 
     
-    public Menu(String nom,double vI, double Vm){
-        
+    public Menu(String nom,double vI){
+        nombrePlato=nom;
+        valorInicial=vI;
+
     }
     public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
-    
+
     public abstract void establecerValorMenu();
       
     public void establecerValorInicial(double tipo){
