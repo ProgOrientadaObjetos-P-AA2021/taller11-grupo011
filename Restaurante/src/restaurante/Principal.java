@@ -26,9 +26,7 @@ public class Principal {
     
     MenualaCarta menucarta=new MenualaCarta("Plato 5", 5, 4.5, 1.5, 10);
     
-    
-    
-    listaMenus.add(menunino1);
+    /*listaMenus.add(menunino1);
     listaMenus.add(menunino2);
     listaMenus.add(menuE1);
     listaMenus.add(menudia);
@@ -39,5 +37,5 @@ public class Principal {
         
             System.out.println(listaMenus.get(i));
             System.out.println();
-    }
+    }*/
 }

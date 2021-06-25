@@ -9,27 +9,27 @@ package restaurante;
  *
  * @author ASUS
  */
-public abstract class Menu {
+public abstract class Menu{
 
     protected String nombrePlato;
     protected double valorInicial;
     protected double valorMenu;
+
     
     public Menu(String nom,double vI){
         nombrePlato=nom;
         valorInicial=vI;
 
     }
-    
     public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
-    public abstract void establecerValorMenu();
 
+    public abstract void establecerValorMenu();
+      
     public void establecerValorInicial(double tipo){
         valorInicial = tipo;
-    }
-    
+    } 
     public String obtenerNombrePlato(){
         return nombrePlato;
     }
@@ -39,4 +39,5 @@ public abstract class Menu {
     public double obtenerValorMenu(){
         return valorMenu;
     }
+       
 }

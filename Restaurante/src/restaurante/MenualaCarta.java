@@ -33,10 +33,11 @@ public class MenualaCarta extends Menu{
     }
     
     @Override
-    public void establecerValorMenu(double n){
-        valorMenu=valorInicial + valorGuarnicion+valorBebida+;
-    }
-    
+    public void establecerValorMenu(){
+        valorMenu = valorGuarnicion+valorBebida+ 
+                valorInicial+(valorInicial*(valorAdicion/100));
+    }    
+
     @Override
     public void establecerValorInicial(double n){
         valorInicial=n;
@@ -64,5 +65,22 @@ public class MenualaCarta extends Menu{
     
     public double obtenerValorAdicion(){
         return valorAdicion;
+    }
+    @Override
+    public String toString() {
+        String cadena = String.format("Menú Carta: \n"
+                + "Nombre del plato: %s\n"
+                + "Valor inicial: %.2f\n"
+                + "Valor Menú: %.2f\n"
+                + "Valor por guarnición: %.2f\n"
+                + "Valor por bebida: %.2f\n"
+                + "Valor adicional: %.2f\n", 
+                obtenerNombrePlato(),
+                obtenerValorInicial(),
+                obtenerValorMenu(),
+                obtenerValorGuarnicion(),
+                obtenerValBebidas(),
+               obtenerValorAdicion()); 
+        return cadena;
     }
 }
