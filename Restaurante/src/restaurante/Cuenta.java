@@ -76,12 +76,11 @@ public class Cuenta {
                     cadena,
                     obtenerMenu().get(i));
         }
-        /*
         cadena = String.format("\n%sValor Total a cancelar: %.2f\n"
                 + "SubTotal: %.2f\n"
                 + "Iva: %2.f\n",
                 cadena,
-                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());*/
+                obtenerValorTotal(),obtenerSubTotal(),obtenerIva());
         return cadena;
     }
   

@@ -59,7 +59,7 @@ public class MenualaCarta extends Menu{
     }
     @Override
     public String toString() {
-        String cadena = String.format("Menú Niño: \n"
+        String cadena = String.format("Menú a la carta: \n"
                 + "Nombre del plato: %s\n"
                 + "Valor inicial: %.2f\n"
                 + "Valor Menú: %.2f\n"
