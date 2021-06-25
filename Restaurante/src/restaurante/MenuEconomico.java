@@ -9,32 +9,31 @@ package restaurante;
  *
  * @author usuario
  */
-public class MenuEconomico {
-    protected String nombrePlato;
-    protected double valorMenu;
-    protected double valorInicial;
+
+public class MenuEconomico extends Menu{
+    
     protected double descuento;
     
-    public void establcerNombrePlato(String tipo){
+    public MenuEconomico(String nom, double vI,double des){
+        super( nom,vI);
+        establecerDescuento(des);
+    }
+    
+    @Override
+    public void establecerNombrePlato(String tipo){
         nombrePlato = tipo;
     }
-    public void establcerValorMenu(double tipo){
+    @Override
+    public void establecerValorMenu(double tipo){
         valorMenu = tipo;
     }
-    public void establcerValorInicial(double tipo){
+    @Override
+    public void establecerValorInicial(double tipo){
         valorInicial = tipo;
     }
     public void establecerDescuento(double tipo){
-        descuento=tipo;
-    }
-    public String obtenerNombrePlato(){
-        return nombrePlato;
-    }
-    public double obtenerValorMenu(){
-        return valorMenu;
-    }
-    public double obtenerValorInicial(){
-        return valorInicial;
+        descuento = tipo;
+
     }
     public double obtenerDescuento(){
         return descuento;
